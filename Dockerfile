@@ -1,4 +1,4 @@
-FROM golang:stretch as builder
+FROM golang:latest as builder
 
 WORKDIR $GOPATH/src
 
