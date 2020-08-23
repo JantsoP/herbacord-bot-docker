@@ -7,10 +7,6 @@ RUN git clone -b yagpdb https://github.com/jantsop/discordgo github.com/jantsop/
   && git clone -b dgofork https://github.com/jantsop/dshardmanager github.com/jantsop/dshardmanager \
   && git clone -b dgofork https://github.com/jantsop/dcmd github.com/jantsop/dcmd
 
-# Fix some fucked up shit coding
-RUN git clone -b v2 https://github.com/jantsop/dshardorchestrator/ $GOPATH/srcgithub.com/jantsop/dshardorchestrator/v2
-RUN git clone -b master https://github.com/jantsop/sqlboiler/ $GOPATH/src/github.com/jantsop/sqlboiler/
-
 RUN go get -d -v \
   github.com/jantsop/yagpdb/cmd/yagpdb
 RUN CGO_ENABLED=0 GOOS=linux go install -v \
